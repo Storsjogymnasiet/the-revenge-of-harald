@@ -1,64 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dry7jkye653da"]
 
-[sub_resource type="GDScript" id="GDScript_u4yt8"]
-script/source = "extends  Control
-@onready var start: Button = $Start
-@onready var settings: Button = $Settings
-@onready var exit: Button = $Exit
-@onready var color_rect: ColorRect = $\"..\"
-@onready var mute: Button = $mute
-@onready var back: Button = $back
-var muted = false
-
-func resett():
-	start.visible = false
-	settings.visible = false
-	exit.visible = false
-	mute.visible = false
-	back.visible = false
-	showw()
-
-
-func hidde():
-	start.visible = false
-	settings.visible = false
-	exit.visible = false
-	
-func showw():
-	start.visible = true
-	settings.visible = true
-	exit.visible = true
-	
-func settingse():
-	back.visible = true
-	mute.visible = true
-
-func _on_start_pressed() -> void:
-	hidde()
-	color_rect.visible = false
-
-func _on_settings_pressed() -> void:
-	hidde()
-	settingse()
-
-func _on_exit_pressed() -> void:
-	get_tree().quit()
-
-
-func _on_mute_pressed() -> void:
-	if muted == false:
-		muted = true
-		mute.text = \"muted on\"
-	else:
-		muted = false
-		mute.text = \"muted off\"
-		
-
-
-func _on_back_pressed() -> void:
-	resett()
-	showw()
-"
+[ext_resource type="Script" uid="uid://ualsy7ur3x8i" path="res://Scripts/ui_master.gd" id="1_1rerr"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -73,7 +15,7 @@ color = Color(0, 0, 0.73333335, 1)
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = SubResource("GDScript_u4yt8")
+script = ExtResource("1_1rerr")
 
 [node name="Start" type="Button" parent="ColorRect/ui_master"]
 layout_mode = 0
