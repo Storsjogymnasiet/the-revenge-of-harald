@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=4 uid="uid://d02nvt647lhxg"]
+[gd_scene load_steps=9 format=4 uid="uid://d02nvt647lhxg"]
 
 [ext_resource type="Texture2D" uid="uid://ccnkj8a4c7tek" path="res://Assets/FD_Dungeon_Free.png" id="1_r17js"]
+[ext_resource type="PackedScene" uid="uid://c2yqpt4370ddr" path="res://Scenes/player.tscn" id="2_iea5s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lrlhk"]
 texture = ExtResource("1_r17js")
@@ -1304,7 +1305,8 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_lrlhk"]
 tile_size = Vector2i(32, 32)
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 8
+physics_layer_0/collision_mask = 7
 sources/1 = SubResource("TileSetAtlasSource_r17js")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8cfjo"]
@@ -1921,3 +1923,6 @@ tile_set = SubResource("TileSet_lrlhk")
 position = Vector2(4, 0)
 tile_map_data = PackedByteArray("AAAMAA8AAQAQABUAAAAFAA8AAQAQABUAAAAHAA4AAQAQABUAAAAFAAcAAQAQABUAAAAAAAgAAQAQABUAAAAAABYAAQAQABUAAAAFABQAAQAQABUAAAATABAAAQAQABUAAAAUAAsAAQAQABUAAAADAAUAAQAUABYAAAACAAUAAQAUABYAAAACAAQAAQAYABYAAAADAAQAAQAZABYAAAA=")
 tile_set = SubResource("TileSet_xfyam")
+
+[node name="player" parent="." instance=ExtResource("2_iea5s")]
+position = Vector2(530, 418)
