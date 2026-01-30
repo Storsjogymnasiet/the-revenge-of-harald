@@ -1,7 +1,6 @@
-[gd_scene load_steps=11 format=4 uid="uid://d02nvt647lhxg"]
+[gd_scene load_steps=10 format=4 uid="uid://d02nvt647lhxg"]
 
 [ext_resource type="Texture2D" uid="uid://ccnkj8a4c7tek" path="res://Assets/FD_Dungeon_Free.png" id="1_r17js"]
-[ext_resource type="PackedScene" uid="uid://c2yqpt4370ddr" path="res://Scenes/player.tscn" id="2_iea5s"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_iea5s"]
 vertices = PackedVector2Array(16, 16, -16, 16, -16, -16, 16, -16)
@@ -1974,6 +1973,3 @@ tile_set = SubResource("TileSet_lrlhk")
 position = Vector2(4, 0)
 tile_map_data = PackedByteArray("AAAMAA8AAQAQABUAAAAFAA8AAQAQABUAAAAHAA4AAQAQABUAAAAFAAcAAQAQABUAAAAAAAgAAQAQABUAAAAAABYAAQAQABUAAAAFABQAAQAQABUAAAATABAAAQAQABUAAAAUAAsAAQAQABUAAAADAAUAAQAUABYAAAACAAUAAQAUABYAAAACAAQAAQAYABYAAAADAAQAAQAZABYAAAA=")
 tile_set = SubResource("TileSet_xfyam")
-
-[node name="player" parent="." instance=ExtResource("2_iea5s")]
-position = Vector2(530, 418)
