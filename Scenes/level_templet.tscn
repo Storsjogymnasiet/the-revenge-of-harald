@@ -1,7 +1,7 @@
-[gd_scene load_steps=11 format=4 uid="uid://d02nvt647lhxg"]
+[gd_scene load_steps=10 format=4 uid="uid://d02nvt647lhxg"]
 
+[ext_resource type="Script" uid="uid://dr0aq0gx38l6u" path="res://Scenes/level_templet.gd" id="1_iea5s"]
 [ext_resource type="Texture2D" uid="uid://ccnkj8a4c7tek" path="res://Assets/FD_Dungeon_Free.png" id="1_r17js"]
-[ext_resource type="PackedScene" uid="uid://c2yqpt4370ddr" path="res://Scenes/player.tscn" id="2_iea5s"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_iea5s"]
 vertices = PackedVector2Array(16, 16, -16, 16, -16, -16, 16, -16)
@@ -1959,6 +1959,7 @@ tile_size = Vector2i(32, 32)
 sources/1 = SubResource("TileSetAtlasSource_8cfjo")
 
 [node name="level templet" type="Node2D"]
+script = ExtResource("1_iea5s")
 
 [node name="TileMapfloor" type="TileMapLayer" parent="."]
 position = Vector2(3, 0)
@@ -1974,6 +1975,3 @@ tile_set = SubResource("TileSet_lrlhk")
 position = Vector2(4, 0)
 tile_map_data = PackedByteArray("AAAMAA8AAQAQABUAAAAFAA8AAQAQABUAAAAHAA4AAQAQABUAAAAFAAcAAQAQABUAAAAAAAgAAQAQABUAAAAAABYAAQAQABUAAAAFABQAAQAQABUAAAATABAAAQAQABUAAAAUAAsAAQAQABUAAAADAAUAAQAUABYAAAACAAUAAQAUABYAAAACAAQAAQAYABYAAAADAAQAAQAZABYAAAAKACMAAQAQABUAAAARACQAAQAQABUAAAAbABYAAQAQABUAAAAdABkAAQAQABUAAAAvABUAAQAQABUAAAARABcAAQAQABUAAAA=")
 tile_set = SubResource("TileSet_xfyam")
-
-[node name="player" parent="." instance=ExtResource("2_iea5s")]
-position = Vector2(539, 415)
