@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=3 uid="uid://dry7jkye653da"]
+
+[ext_resource type="Script" uid="uid://ualsy7ur3x8i" path="res://Scripts/ui_master.gd" id="1_1rerr"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 250.0
+grow_vertical = 2
+color = Color(0, 0, 0.73333335, 1)
+
+[node name="ui_master" type="Control" parent="ColorRect"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_1rerr")
+
+[node name="Start" type="Button" parent="ColorRect/ui_master"]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 97.0
+offset_right = 147.0
+offset_bottom = 128.0
+text = "start"
+
+[node name="Settings" type="Button" parent="ColorRect/ui_master"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 138.0
+offset_right = 160.0
+offset_bottom = 169.0
+text = "settings"
+
+[node name="Exit" type="Button" parent="ColorRect/ui_master"]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 176.0
+offset_right = 144.0
+offset_bottom = 207.0
+text = "Exit"
+
+[node name="mute" type="Button" parent="ColorRect/ui_master"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = 88.0
+offset_top = 97.0
+offset_right = 163.0
+offset_bottom = 128.0
+text = "mute off
+"
+
+[node name="back" type="Button" parent="ColorRect/ui_master"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_right = 45.0
+offset_bottom = 31.0
+text = "back"
+
+[node name="Button3" type="Button" parent="ColorRect/ui_master"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = 124.0
+offset_top = 146.0
+offset_right = 132.0
+offset_bottom = 162.0
+
+[connection signal="pressed" from="ColorRect/ui_master/Start" to="ColorRect/ui_master" method="_on_start_pressed"]
+[connection signal="pressed" from="ColorRect/ui_master/Settings" to="ColorRect/ui_master" method="_on_settings_pressed"]
+[connection signal="pressed" from="ColorRect/ui_master/Exit" to="ColorRect/ui_master" method="_on_exit_pressed"]
+[connection signal="pressed" from="ColorRect/ui_master/mute" to="ColorRect/ui_master" method="_on_mute_pressed"]
+[connection signal="pressed" from="ColorRect/ui_master/back" to="ColorRect/ui_master" method="_on_back_pressed"]

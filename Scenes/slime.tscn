@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://dt5ljiefsxjbx"]
+
+[ext_resource type="Texture2D" uid="uid://cv2f8h6j8dbwh" path="res://Assets/icon.svg" id="1_jokqx"]
+[ext_resource type="Script" uid="uid://g1nnfpkyvreu" path="res://Scripts/mob.gd" id="1_swwnm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_swwnm"]
+
+[node name="slime" type="CharacterBody2D"]
+position = Vector2(490, 210)
+collision_layer = 2
+collision_mask = 14
+script = ExtResource("1_swwnm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_swwnm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.7881393e-07, -1.9669533e-06)
+scale = Vector2(0.15625004, 0.15625001)
+texture = ExtResource("1_jokqx")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_desired_distance = 3.0
+target_desired_distance = 1.0
+path_max_distance = 10.0
+path_postprocessing = 1
+debug_enabled = true
+debug_path_custom_color = Color(1, 0.13999999, 0.15433311, 1)
+
+[node name="Pathfind" type="Timer" parent="."]
+process_callback = 0
+wait_time = 0.05
+autostart = true
+
+[node name="Cooldown" type="Timer" parent="."]
+
+[connection signal="timeout" from="Pathfind" to="." method="_on_timer_timeout"]

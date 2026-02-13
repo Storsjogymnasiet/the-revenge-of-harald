@@ -13,7 +13,7 @@ config_version=5
 config/name="The Revenge of Harald"
 run/main_scene="res://Scenes/world.tscn"
 config/features=PackedStringArray("4.5", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://Assets/icon.svg"
 
 [input]
 
@@ -42,6 +42,14 @@ down={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="player"
+2d_physics/layer_2="enemy"
+2d_physics/layer_3="object"
+2d_physics/layer_4="wall"
+
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
