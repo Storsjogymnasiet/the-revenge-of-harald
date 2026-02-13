@@ -1976,5 +1976,5 @@ tile_map_data = PackedByteArray("AAAWAB0AAQAYABYAAAAWAB4AAQAYABcAAAAXAB0AAQAZABY
 tile_set = SubResource("TileSet_xfyam")
 
 [node name="player" parent="." instance=ExtResource("2_p08bx")]
-position = Vector2(529, 418)
+position = Vector2(370, -6)
 collision_mask = 9
