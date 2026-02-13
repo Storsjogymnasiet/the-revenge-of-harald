@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dr0aq0gx38l6u" path="res://Scenes/level_templet.gd" id="1_iea5s"]
 [ext_resource type="Texture2D" uid="uid://ccnkj8a4c7tek" path="res://Assets/FD_Dungeon_Free.png" id="1_r17js"]
+[ext_resource type="PackedScene" uid="uid://butobvrs3b7wh" path="res://Scenes/key.tscn" id="3_y51gd"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_iea5s"]
 vertices = PackedVector2Array(16, 16, -16, 16, -16, -16, 16, -16)
@@ -1975,3 +1976,6 @@ tile_set = SubResource("TileSet_lrlhk")
 position = Vector2(4, 0)
 tile_map_data = PackedByteArray("AAAMAA8AAQAQABUAAAAFAA8AAQAQABUAAAAHAA4AAQAQABUAAAAFAAcAAQAQABUAAAAAAAgAAQAQABUAAAAAABYAAQAQABUAAAAFABQAAQAQABUAAAATABAAAQAQABUAAAAUAAsAAQAQABUAAAADAAUAAQAUABYAAAACAAUAAQAUABYAAAACAAQAAQAYABYAAAADAAQAAQAZABYAAAAKACMAAQAQABUAAAARACQAAQAQABUAAAAbABYAAQAQABUAAAAdABkAAQAQABUAAAAvABUAAQAQABUAAAARABcAAQAQABUAAAA=")
 tile_set = SubResource("TileSet_xfyam")
+
+[node name="key" parent="." instance=ExtResource("3_y51gd")]
+position = Vector2(1488, 722)
