@@ -9,7 +9,8 @@
 [node name="level templet" parent="." instance=ExtResource("1_5a7ea")]
 
 [node name="player" parent="." instance=ExtResource("1_a02cp")]
-position = Vector2(112, 72)
+position = Vector2(517, 417)
+collision_mask = 15
 
 [node name="slime" parent="." node_paths=PackedStringArray("Goal") instance=ExtResource("3_8j60k")]
 position = Vector2(542, 223)

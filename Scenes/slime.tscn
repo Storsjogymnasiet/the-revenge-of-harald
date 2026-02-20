@@ -8,7 +8,7 @@
 [node name="slime" type="CharacterBody2D"]
 position = Vector2(490, 210)
 collision_layer = 2
-collision_mask = 15
+collision_mask = 14
 script = ExtResource("1_swwnm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -21,15 +21,17 @@ texture = ExtResource("1_jokqx")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 path_desired_distance = 3.0
-target_desired_distance = 25.0
+target_desired_distance = 1.0
 path_max_distance = 10.0
 path_postprocessing = 1
 debug_enabled = true
 debug_path_custom_color = Color(1, 0.13999999, 0.15433311, 1)
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Pathfind" type="Timer" parent="."]
 process_callback = 0
 wait_time = 0.05
 autostart = true
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="Cooldown" type="Timer" parent="."]
+
+[connection signal="timeout" from="Pathfind" to="." method="_on_timer_timeout"]
