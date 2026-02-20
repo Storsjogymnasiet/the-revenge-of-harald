@@ -1,17 +1,39 @@
-[gd_scene load_steps=4 format=3 uid="uid://bgugp4ie2jkj2"]
+[gd_scene load_steps=5 format=3 uid="uid://bgugp4ie2jkj2"]
 
 [ext_resource type="PackedScene" uid="uid://d02nvt647lhxg" path="res://Scenes/level_templet.tscn" id="1_5a7ea"]
 [ext_resource type="PackedScene" uid="uid://c2yqpt4370ddr" path="res://Scenes/player.tscn" id="1_a02cp"]
 [ext_resource type="PackedScene" uid="uid://dt5ljiefsxjbx" path="res://Scenes/slime.tscn" id="3_8j60k"]
+[ext_resource type="Texture2D" uid="uid://bvjfo141e7256" path="res://Assets/light.webp" id="4_fo5ed"]
 
 [node name="World" type="Node2D"]
 
 [node name="level templet" parent="." instance=ExtResource("1_5a7ea")]
 
 [node name="player" parent="." instance=ExtResource("1_a02cp")]
-position = Vector2(517, 417)
+position = Vector2(506, 401)
 collision_mask = 15
 
+[node name="PointLight2D" type="PointLight2D" parent="player"]
+position = Vector2(-1.0000019, 0.9999962)
+rotation = -1.573686
+scale = Vector2(0.70502836, -0.7855946)
+color = Color(0.69011897, 0.63684773, 0.15189984, 1)
+energy = 3.46
+shadow_enabled = true
+shadow_item_cull_mask = 3
+texture = ExtResource("4_fo5ed")
+texture_scale = 1.52
+
 [node name="slime" parent="." node_paths=PackedStringArray("Goal") instance=ExtResource("3_8j60k")]
-position = Vector2(542, 223)
+position = Vector2(528, 287)
 Goal = NodePath("../player")
+
+[node name="slime2" parent="." node_paths=PackedStringArray("Goal") instance=ExtResource("3_8j60k")]
+position = Vector2(1090, 611)
+Goal = NodePath("../player")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0, 0, 0, 1)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+energy = 0.31
